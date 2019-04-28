@@ -28,14 +28,14 @@ public class MeuPrimeiroPrograma {
 		}
 		
 		Autor autor = new Autor();
-		autor.nome = "Rodrigo Turini";
-		autor.email = "rodrigo.turini@caelum.com.br";
-		autor.cpf = "123.456.789-10";
+		autor.setNome("Rodrigo Turini");
+		autor.setEmail("rodrigo.turini@caelum.com.br");
+		autor.setCpf("123.456.789-10");
 
 		Autor autor2 = new Autor();
-		autor2.nome = "Paulo Silveira";
-		autor2.email = "paulo.silveri@caelum.com.br";
-		autor2.cpf = "123.456.789-10";
+		autor2.setNome("Paulo Silveira");
+		autor2.setEmail("paulo.silveri@caelum.com.br");
+		autor2.setCpf("123.456.789-10");
 
 		if(autor == autor2) {
 			System.out.println("Iguais, mesmo autor!");
@@ -43,16 +43,11 @@ public class MeuPrimeiroPrograma {
 			System.out.println("hein?! Por que diferentes?");
 		}
 		
-		Livro livro = new Livro();
-		livro.autor = autor;
-		livro.autor.nome = "Guilherme Silveira";
-		System.out.println(livro.autor.nome);
+		Livro livro = new Livro(autor);
+		livro.getAutor().setNome("Guilherme Silveira");
+		System.out.println(livro.getAutor().getNome());
 		
-		Livro livro1 = new Livro();
-		Livro livro2 = new Livro();
-		Livro livro3 = new Livro();
-		Livro livro4 = new Livro();
-	}
+		}
 }
 
 
