@@ -43,7 +43,7 @@ public class MeuPrimeiroPrograma {
 			System.out.println("hein?! Por que diferentes?");
 		}
 		
-		Livro livro = new Livro(autor);
+		Livro livro = new LivroFisico(autor);
 		livro.getAutor().setNome("Guilherme Silveira");
 		System.out.println(livro.getAutor().getNome());
 		
