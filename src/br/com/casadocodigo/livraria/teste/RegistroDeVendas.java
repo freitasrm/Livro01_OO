@@ -1,8 +1,11 @@
 package br.com.casadocodigo.livraria.teste;
 
+import java.io.FileNotFoundException;
+
 import br.com.casadocodigo.livraria.Autor;
 import br.com.casadocodigo.livraria.produtos.CarrinhoDeCompras;
 import br.com.casadocodigo.livraria.produtos.Ebook;
+import br.com.casadocodigo.livraria.produtos.Livro;
 import br.com.casadocodigo.livraria.produtos.LivroFisico;
 import br.com.casadocodigo.livraria.produtos.Produto;
 
@@ -50,7 +53,22 @@ public class RegistroDeVendas {
 			}
 		}
 		
+		
 		System.out.println("Fui executado!");
+
+		
+		
+		try {
+			abreArquivo();
+		} catch (FileNotFoundException e1) {
+			System.out.println("Não consegui abrir o arquivo");
+		}
+		
+		Livro livre = new LivroFisico(null);	
 	}
 
+	public static void abreArquivo() throws FileNotFoundException{
+		new java.io.FileInputStream("Arquivo.txt");
+	}
+	
 }
