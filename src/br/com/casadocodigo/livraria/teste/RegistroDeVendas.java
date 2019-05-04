@@ -1,6 +1,7 @@
 package br.com.casadocodigo.livraria.teste;
 
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 
 import br.com.casadocodigo.livraria.Autor;
 import br.com.casadocodigo.livraria.produtos.CarrinhoDeCompras;
@@ -64,7 +65,19 @@ public class RegistroDeVendas {
 			System.out.println("Não consegui abrir o arquivo");
 		}
 		
-		Livro livre = new LivroFisico(null);	
+		System.out.println(ebook);
+		
+		System.out.println(autor.getClass().getSimpleName());
+		
+		ArrayList lista = new ArrayList();
+		String valor = "Conhecendo um arraylist";
+		lista.add(valor);
+		System.out.println(lista.contains(valor));
+		lista.remove(valor);
+		System.out.println(lista.contains(valor));
+		
+		Livro livre = new LivroFisico(null);
+		
 	}
 
 	public static void abreArquivo() throws FileNotFoundException{

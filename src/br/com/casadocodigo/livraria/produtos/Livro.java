@@ -24,18 +24,23 @@ public abstract class Livro implements Produto{
 		
 	}
 	
-	public void mostrarDetalhes() {
-		System.out.println("Mostrando detalhes do livro ");
-		System.out.println("Nome: " + nome);
-		System.out.println("Descrição: " + descricao);
-		System.out.println("Valor: " + valor);
-		System.out.println("ISBN: " + isbn);
-		
+	@Override
+	public String toString() {
+		String autorLocal = "";
 		if(this.temAutor()) {
-			autor.mostrarDetalhes();	
+			  autorLocal = autor.toString();
 		}
+
+		return	"Mostrando detalhes do livro " +
+				"\nNome: " + nome +
+				"\nDescrição: " + descricao +
+				"\nValor: " + valor +
+				"\nISBN: " + isbn +
+				"\n" + autorLocal +
+				"--";
 		
-		System.out.println("--");
+				
+				
 	}
 		
 	public boolean temAutor() {

@@ -6,11 +6,12 @@ public class Autor {
 	private String email;
 	private String cpf;
 	
-	public void mostrarDetalhes() {
-		System.out.println("Mostrando detalhes do autor ");
-		System.out.println("Nome: " + nome);
-		System.out.println("Email: " + email);
-		System.out.println("CPF: " + cpf);
+	@Override
+	public String toString() {
+		return 	"Mostrando detalhes do autor "+
+				"\nNome: " + nome +
+				"\nEmail: " + email+
+				"\nCPF: " + cpf;
 	}
 
 	public String getNome() {
@@ -36,6 +37,13 @@ public class Autor {
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(!(obj instanceof Autor)) return false;
+		Autor outro = (Autor) obj;
+		return this.nome.equals(outro.nome);
+				
+	}
 	
 }
