@@ -1,7 +1,6 @@
 package br.com.casadocodigo.livraria.produtos;
 
-@FunctionalInterface
-public interface Produto {
+public interface Produto extends Comparable<Produto>  {
 	
 	public abstract double getValor();
 }

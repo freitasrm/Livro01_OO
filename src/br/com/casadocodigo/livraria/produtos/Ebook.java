@@ -20,7 +20,7 @@ public class Ebook extends Livro implements Promocional{
 		System.out.println("aplicando Desconto no Ebook");
 		return true;
 	}
-	
+		
 	public String getWaterMark() {
 		return waterMark;
 	}

@@ -2,6 +2,8 @@ package br.com.casadocodigo.livraria.teste;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 import br.com.casadocodigo.livraria.Autor;
 import br.com.casadocodigo.livraria.produtos.CarrinhoDeCompras;
@@ -33,7 +35,7 @@ public class RegistroDeVendas {
 		System.out.println("Total: " + carrinho.getTotal());
 		
 		
-		Produto[] produtos = carrinho.getProdutos();
+		List<Produto> produtos = carrinho.getProdutos();
 
 		for(Produto produto : produtos) {
 			if(produto != null) {
@@ -41,9 +43,9 @@ public class RegistroDeVendas {
 			}
 		}
 		
-		for(int i = 0; i <= produtos.length; i++) {
+		for(int i = 0; i < produtos.size(); i++) {
 			try {
-				Produto produto = produtos[i];
+				Produto produto = produtos.get(i);
 				if(produto != null) {
 					System.out.println(produto.getValor());
 				}
@@ -75,6 +77,17 @@ public class RegistroDeVendas {
 		System.out.println(lista.contains(valor));
 		lista.remove(valor);
 		System.out.println(lista.contains(valor));
+		
+		
+		List<String> nomes = new ArrayList<>();
+		
+		nomes.add("Rodrigo Turini");
+		nomes.add("Adriano Almeida");
+		nomes.add("Paulo Silveira");
+		
+		Collections.sort(nomes);
+		
+		System.out.println(nomes);
 		
 		Livro livre = new LivroFisico(null);
 		
