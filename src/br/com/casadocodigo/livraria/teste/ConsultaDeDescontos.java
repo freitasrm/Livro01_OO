@@ -6,8 +6,11 @@ public class ConsultaDeDescontos {
 		
 		GerenciadorDeCupons gerenciador = new GerenciadorDeCupons();
 		
-		if(gerenciador.validaCupom("CUP1234")) {
+		Double desconto = gerenciador.validaCupom("CUP11");
+		
+		if(desconto != null) {
 			System.out.println("Cupom de desconto valido.");
+			System.out.println("Valor " + desconto);
 		} else {
 			System.out.println("Este cupom não existe");
 		}
